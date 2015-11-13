@@ -1,0 +1,23 @@
+.search-from{
+	margin-bottom: 15px;
+	border: 1px solid #ddd;
+	padding: 5px 0;
+	padding-left: 20px;
+	background-color: #BDBEC9;
+	}
+.type_search{
+	width: 160px;
+	height: 24px;
+	
+	
+	}
+.select_type:hover{
+	background-color: #0362FD;
+	}
+.add_new{
+    color: #fff !important;
+    float: right;
+    font-size: 15px;
+    border: 1px solid;
+    padding: 3px;
+	}
