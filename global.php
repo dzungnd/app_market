@@ -6,13 +6,15 @@ require_once('dbconnect.php');
 //Get information
 $username = $_SESSION["username"];
 $page = $_GET['page'];
-//Get user's information
-$get_user = mysqli_query($connection, "SELECT * FROM `users` WHERE `username`='$username'");
-while($row = mysqli_fetch_array($get_user)){
-	$userId = $row['id'];
-	$userEmail = $row['email'];
-	$createDate = $row['create_date'];
-	$userRole = $row['role'];
-	$userCredit = $row['credits'];
+$getDevice = $_GET['device'];
+if($getDevice == all OR $getDevice == NULL){
+	$getCategory = "All Devices";
+}elseif ($getDevice == "iphone") {
+	$getCategory = "iPhone Device";
+}elseif ($getDevice == "ipad") {
+	$getCategory = "iPad Device";
+}elseif ($getDevice == "android") {
+	$getCategory = "Android device";
 }
+
 ?>

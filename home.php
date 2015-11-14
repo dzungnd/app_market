@@ -2,7 +2,9 @@
 error_reporting(E_ALL ^ E_NOTICE);
 require_once('global.php');
 require_once('function.php');
-
+ if (!isset($_SESSION["username"])){
+               header('Location: ./login.php');
+           }
 ?>
 <!DOCTYPE html>
 <!-- 

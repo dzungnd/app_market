@@ -23,24 +23,30 @@
 								<h2 class="subh2">
 									<span class="subwpr"><a
 										title="Download Trending Games for free"
-										href="#">Hot</a></span>
+										href="#"><?php echo $getCategory; ?></a></span>
 								</h2>
 							
 							</div>
 							<ul class="lst-ul">
+
+							<?php 
+							$showApps = showApps(null, "arr", $connection);
+
+							foreach ($showApps as $value) {
+								
+							?>
 								<li class="lst-li il_normal      " data_val=""><div
 										class="lst-cnt">
 										<div class="lst-cnt-h">
-											<a title="Download &amp; play Rivals Rush free game"
+											<a title="<?php echo $value['name']?>"
 												href="#"
 												class="cnt-a "><div class="imgh">
 													<div class="appimg">
 														<div class="imgwpr">
 															<div class="image">
-																<img alt="Download Rivals Rush free game"
+																<img alt="<?php echo $value['name']?>"
 																	class="img lazy "
-																	data-original="http://c2.mobimgs.com/m/655n_Cfch9tP49HpHCOPoIrntN9u5STTYfZW9D7PwCU_vdcveylyNNTwN5irr7bG0TIpRb4Bfyg_FrEl1d5wZxoIAe0HljhKciAGFQEFADy8k36It7mtCE2NCApsdQxO3l6GBCsHVhih2_k9fZNhTbT1tz1GPI1xoffhGT8Mc_I%3D/e5fab21ffb464e6fa00a9f5e15adae4a_icon512.png"
-																	src="e5fab21ffb464e6fa00a9f5e15adae4a_icon512.png"
+																	src="<?php echo $value['img']?>"
 																	style="display: inline-block;">
 															</div>
 														</div>
@@ -48,7 +54,7 @@
 												</div>
 												<div class="cnth">
 													<h3 class="title">
-														Rivals Rush<span class="dotdot"></span>
+														<?php echo $value['name']?><span class="dotdot"></span>
 													</h3>
 													<p class="subcategory">
 														Arcade<span class="dotdot"></span>
@@ -70,11 +76,11 @@
 											</div>
 											<div class="lst-download">
 												<a
-													href="#sendtomobile"
+													href="<?php echo $value['url']?>"
 													rel="nofollow" class="btn btn-orange cursorp stmClk"
 													data-plugin="modal" data_fileid="1907140"
-													data_title="Rivals Rush"><span class="stmcdtxt">Send
-														to</span>&nbsp;<i class="bic bic-stmcd"></i></a>
+													data_title="<?php echo $value['name']?>"><span class="stmcdtxt">GET</span>&nbsp;<i class="fa fa-download"></i></a>
+											<?php } ;?>
 											</div>
 										</div>
 									</div></li>
