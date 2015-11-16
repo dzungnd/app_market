@@ -1,15 +1,15 @@
 <div class="margin-top-10">
 									<ul class="mix-filter">
-										<a href="./?device=all"><li class="filter">
+										<a href="./home.php?device="><li class="filter">
 											 All
 										</li></a>
-										<a href="./?device=iphone"><li class="filter" >
+										<a href="./home.php?device=iphone"><li class="filter" >
 											 iPhone
 										</li></a>
-										<a href="./?device=ipad"><li class="filter" >
+										<a href="./home.php?device=ipad"><li class="filter" >
 											 iPad
 										</li></a>
-										<a href="./?device=android"><li class="filter">
+										<a href="./home.php?device=android"><li class="filter">
 											 Android
 										</li></a>
 										
@@ -30,7 +30,7 @@
 							<ul class="lst-ul">
 
 							<?php 
-							$showApps = showApps(null, "arr", $connection);
+							$showApps = showApps(NULL , $getDevice, "arr", $connection);
 
 							foreach ($showApps as $value) {
 								

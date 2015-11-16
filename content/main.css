@@ -4,81 +4,81 @@
 }
 
 
-#containholder a:focus {
+.containholder a:focus {
 	outline: thin dotted
 }
 
-#containholder a:active, a:hover {
+.containholder a:active, a:hover {
 	outline: 0
 }
 
-#containholder b, strong, .bold {
+.containholder b, strong, .bold {
 	font-weight: bold
 }
 
-#containholder hr {
+.containholder hr {
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
 	height: 0
 }
 
-#containholder img {
+.containholder img {
 	border: 0
 }
 
-#containholder button, input, select, textarea {
+.containholder button, input, select, textarea {
 	font-family: inherit;
 	font-size: 120%;
 	margin: 0;
 	border: 0 none
 }
 
-#containholder input[type='text'], button, textarea {
+.containholder input[type='text'], button, textarea {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none
 }
 
-#containholder input[type='text'], input[type='password'], input[type='email'], select,
+.containholder ul.lst-ul li.lst-li >  input[type='text'], > input[type='password'], > input[type='email'], > select,
 	textarea {
 	display: block;
 	border: 0;
 	width: 100%
 }
 
-#containholder input::-webkit-input-placeholder {
+.containholder input::-webkit-input-placeholder {
 	color: #939393
 }
 
-#containholder input:-moz-placeholder {
+.containholder input:-moz-placeholder {
 	color: #939393
 }
 
-#containholder input::-moz-placeholder {
+.containholder input::-moz-placeholder {
 	color: #939393
 }
 
-#containholder input:-ms-input-placeholder {
+.containholder input:-ms-input-placeholder {
 	color: #939393
 }
 
-#containholder textarea::-webkit-input-placeholder {
+.containholder textarea::-webkit-input-placeholder {
 	color: #939393
 }
 
-#containholder textarea:-moz-placeholder {
+.containholder textarea:-moz-placeholder {
 	color: #939393
 }
 
-#containholder textarea::-moz-placeholder {
+.containholder textarea::-moz-placeholder {
 	color: #939393
 }
 
-#containholder textarea:-ms-input-placeholder {
+.containholder textarea:-ms-input-placeholder {
 	color: #939393
 }
 
-#containholder label.input {
+.containholder label.input {
 	display: block;
 	padding: 4px;
 	background: #fff;
@@ -92,36 +92,36 @@
 	background: transparent
 }
 
-#containholder button, input {
+.containholder button, input {
 	line-height: normal
 }
 
-#containholder button, select {
+.containholder button, select {
 	text-transform: none
 }
 
-#containholder button, html input[type="button"], input[type="reset"], input[type="submit"]
+.containholder  ul.lst-ul li.lst-li >  button, > html input[type="button"], > input[type="reset"], > input[type="submit"]
 	{
 	-webkit-appearance: button;
 	cursor: pointer
 }
 
-#containholder input[type="checkbox"], input[type="radio"] {
+.containholder input[type="checkbox"], input[type="radio"] {
 	box-sizing: border-box;
 	padding: 0
 }
 
-#containholder button::-moz-focus-inner, input::-moz-focus-inner {
+.containholder button::-moz-focus-inner, input::-moz-focus-inner {
 	border: 0;
 	padding: 0
 }
 
-#containholder a {
+.containholder a {
 	text-decoration: none;
 	color: #333
 }
 
-#containholder table {
+.containholder table {
 	border-collapse: collapse;
 	border-spacing: 0
 }
@@ -487,7 +487,7 @@ h3.fli-title {
 	}
 }
 
-.btn {
+.containholder > .btn {
 	display: inline-block;
 	border: 0;
 	text-align: center;

@@ -4,7 +4,7 @@ require_once('global.php');
 require_once('function.php');
 ?>
 <div class="row">
-				<div class="col-md-9 ">
+				<div class="col-md-6 ">
 					<!-- BEGIN SAMPLE FORM PORTLET-->
 					<div class="portlet box blue">
 						<div class="portlet-title">
@@ -14,7 +14,7 @@ require_once('function.php');
 							
 						</div>
 						<div class="portlet-body form">
-							<form role="form">
+							<form role="form" method="POST" action="">
 								<div class="form-body">
 									<div class="form-group">
 										<label for="exampleInputEmail1">Id</label>
@@ -69,3 +69,9 @@ require_once('function.php');
 						</div>
 					</div>
 <?php
+
+if(isset($_POST['appName'])){
+addApps($_POST['appId'], $_POST['appName'], $_POST['appUrl'], $_POST['appImgurl'], $_POST['appPrice'], $_POST['appNet'], $_POST['appDevice'], $_POST['appDes'], $connection);
+
+}
+?>

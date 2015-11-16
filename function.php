@@ -107,11 +107,15 @@ function timeAgo($from){
 return floor($timeAgo/60);	
 }
 //Show apps list
-function showApps($id, $info, $connection){
-	if($id == NULL){
+function showApps($id, $device, $info, $connection){
+	if($id == NULL && $device != NULL){
+		$getApps = mysqli_query($connection, "SELECT * FROM `apps` WHERE `device`='$device'");
+	}elseif($id == NULL AND $device == NULL) {
 		$getApps = mysqli_query($connection, "SELECT * FROM `apps`");
-	}else{
-		$getApps = mysqli_query($connection, "SELECT * FROM `apps` WHERE `id`='$id'");	
+	}elseif($id != NULL AND $device != NULL){
+		$getApps = mysqli_query($connection, "SELECT * FROM `apps` WHERE `id`='$id' AND `device`='$device'");	
+	}elseif($id != NULL AND $device = NULL){
+		$getApps = mysqli_query($connection, "SELECT * FROM `apps` WHERE `id`='$id' ");	
 	}
 	$appList = array();
 	while($row = mysqli_fetch_array($getApps)){
@@ -197,11 +201,12 @@ function addUsers($addUsername, $addUserpass, $addUseremail, $connection){
 	echo "<script type='text/javascript'>alert('Create user success!');</script>";
 }
 //Add apps
-function addApps($appId, $appName, $appUrl, $appImgurl, $appPrice, $appNet, $appDevice, $appDes, $connection){
+function addApps($appId, $appName, $appUrl, $appImgurl, $appCre, $appNet, $appDevice, $appDes, $connection){
 	$appCre = $appPrice*30/100;
-
-	mysqli_query($connection, "INSERT INTO `apps` (`id`, `name`, `tracking_url`, `image_url`, `count_like`, `download`, `network`, `add_date`, `apps_credit`, `rank`, `device`, `description`, `id_on_net`) VALUES
-	 ('', '$appName', '$appUrl' , '$appImgurl', '99', '999', '$appNet', '$addDate', '$appCre', '1', '$appDevice', '$appDes', '$appId')");
-	echo "<script type='text/javascript'>alert('Create user success!');</script>";
+	$appLike = rand(99, 1000);
+	$appDownload = rand(99, 1000);
+	$addDate = date("Y-m-d H:i:s", time());
+	mysqli_query($connection, "INSERT INTO `apps` (`id`, `name`, `tracking_url`, `image_url`, `count_like`, `download`, `network`, `add_date`, `apps_credit`, `rank`, `device`, `description`, `id_on_net`) VALUES ('', '$appName', '$appUrl' , '$appImgurl', '$appLike', '$appDownload', '$appNet', '$addDate', '$appCre', '1', '$appDevice', '$appDes', '$appId')");
+	echo "<script type='text/javascript'>alert('Add app success!');</script>";
 }
 ?>

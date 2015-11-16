@@ -7,7 +7,7 @@ require_once('dbconnect.php');
 $username = $_SESSION["username"];
 $page = $_GET['page'];
 $getDevice = $_GET['device'];
-if($getDevice == all OR $getDevice == NULL){
+if($getDevice == NULL){
 	$getCategory = "All Devices";
 }elseif ($getDevice == "iphone") {
 	$getCategory = "iPhone Device";
